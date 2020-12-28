@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.androidtaskvodo.PickUp.PickUpActivity;
+import com.example.androidtaskvodo.SparePart.SparePartActivity;
 import com.example.androidtaskvodo.databinding.ActivityHomeBinding;
 
 public class HomeActivityForUser extends AppCompatActivity {
@@ -28,7 +29,15 @@ public class HomeActivityForUser extends AppCompatActivity {
                 Intent pickUpActivit = new Intent(HomeActivityForUser.this , PickUpActivity.class);
                 startActivity(pickUpActivit);
 
+            }
+        });
 
+        binding.btnSparePart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent SparePartActivity = new Intent(HomeActivityForUser.this , SparePartActivity.class);
+                startActivity(SparePartActivity);
             }
         });
 
