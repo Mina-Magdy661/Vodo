@@ -14,6 +14,4 @@ public abstract class PickUpSave extends RoomDatabase {
         public abstract PickUpDao pickUpDao();
 
 
-
-
 }

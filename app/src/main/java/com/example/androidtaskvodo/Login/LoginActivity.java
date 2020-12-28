@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(registerIntent);
             }
         });
-        
+
     }
 
     private AccountData findUser(final String email , String password) {

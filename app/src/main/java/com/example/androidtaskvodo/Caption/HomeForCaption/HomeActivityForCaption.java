@@ -1,6 +1,7 @@
 package com.example.androidtaskvodo.Caption.HomeForCaption;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 
 import android.content.Intent;
@@ -18,11 +19,9 @@ import java.util.List;
 public class HomeActivityForCaption extends AppCompatActivity {
 
 
-   Button btnPickUp ;
+   CardView btnPickUp ;
 
-
-
-    @Override
+       @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_for_caption);

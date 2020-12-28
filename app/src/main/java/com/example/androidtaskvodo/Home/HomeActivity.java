@@ -1,14 +1,17 @@
 package com.example.androidtaskvodo.Home;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.androidtaskvodo.PickUp.PickUpActivity;
 import com.example.androidtaskvodo.R;
+import com.example.androidtaskvodo.SparePart.SparePartActivity;
 import com.example.androidtaskvodo.databinding.ActivityHomeBinding;
 
 
@@ -27,12 +30,22 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent pickUpActivit = new Intent(HomeActivity.this , PickUpActivity.class);
+                Intent pickUpActivit = new Intent(HomeActivity.this , SparePartActivity.class);
                 startActivity(pickUpActivit);
-
 
             }
         });
+
+        binding.btnSparePart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent pickUpActivit = new Intent(HomeActivity.this , SparePartActivity.class);
+                startActivity(pickUpActivit);
+
+            }
+        });
+
 
 
     }

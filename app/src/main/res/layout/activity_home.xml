@@ -83,8 +83,9 @@
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
-            android:id="@+id/btnSpareParts"
+            android:id="@+id/btnSparePart"
             android:layout_margin="10dp"
             android:backgroundTint="@color/purple"
             app:cardElevation="2dp"
@@ -148,7 +149,7 @@
             android:layout_margin="10dp"
             android:backgroundTint="@color/blue"
             android:id="@+id/cardView3"
-            android:layout_below="@id/btnSpareParts"
+            android:layout_below="@id/btnSparePart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
