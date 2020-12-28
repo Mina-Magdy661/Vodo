@@ -10,7 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.androidtaskvodo.Home.HomeActivity;
+import com.example.androidtaskvodo.UI.HomeForCaption.HomeActivityForCaption;
+import com.example.androidtaskvodo.UI.HomeActivityForUser;
 import com.example.androidtaskvodo.R;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -29,8 +30,7 @@ public class LoginActivity extends AppCompatActivity {
    static public   AccountData accountData ;
     String email , password ;
 
-    String emailCaption = "Admin" ;
-    String passwordCaption = "Admin" ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,21 +52,29 @@ public class LoginActivity extends AppCompatActivity {
                 if(editEmail.getText().toString().isEmpty() || editPassword.getText().toString().isEmpty()){
 
                     Toast.makeText(LoginActivity.this, "Please Fill All Data", Toast.LENGTH_SHORT).show();
-                }else{
+                }else {
 
                     email = editEmail.getText().toString();
                     password = editPassword.getText().toString();
 
-                  accountData =  findUser(email , password);
+                    if (email.equals("Admin") && password.equals("Admin")) {
+                        Intent HomeIntentCaption = new Intent(LoginActivity.this, HomeActivityForCaption.class);
+                        startActivity(HomeIntentCaption);
+                    } else {
 
-                  if(accountData == null){
-                      Toast.makeText(LoginActivity.this, "Data Not Found", Toast.LENGTH_SHORT).show();
-                  }else{
+                        accountData = findUser(email, password);
 
-                      Intent HomeIntent = new Intent(LoginActivity.this , HomeActivity.class);
-                      startActivity(HomeIntent);
-                  }
+                        if (accountData == null) {
+                            Toast.makeText(LoginActivity.this, "Data Not Found", Toast.LENGTH_SHORT).show();
+                        } else {
 
+
+                            Intent HomeIntent = new Intent(LoginActivity.this, HomeActivityForUser.class);
+                            startActivity(HomeIntent);
+
+                        }
+
+                    }
                 }
             }
         });

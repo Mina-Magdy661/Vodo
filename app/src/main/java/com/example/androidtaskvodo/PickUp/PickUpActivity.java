@@ -24,7 +24,6 @@ public class PickUpActivity extends AppCompatActivity {
     PickUpViewModel pickUpViewModel ;
 
     private  PickUpDeatils pickUpDeatils  ;
-    List<PickUpDeatils> listOfNotifyPickUp ;
 
     private AutoCompleteTextView address;
     private final String mAPIKey = "AIzaSyAPFni3t26DtJiN3GO2k8fk0sp1H19Ptdg";
@@ -51,7 +50,7 @@ public class PickUpActivity extends AppCompatActivity {
 
                 pickUpDeatils = new PickUpDeatils(binding.editCarModel.getText().toString() ,
                         binding.editCarType.getText().toString(), binding.address.getText().toString() ,
-                       " LoginActivity.accountData.getMembershipID()");
+                        LoginActivity.accountData.getMembershipID());
 
               Thread thread = new Thread(new Runnable() {
                   @Override
@@ -64,13 +63,6 @@ public class PickUpActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
-//        Toast.makeText(this,  LoginActivity.accountData.getMembershipID(), Toast.LENGTH_SHORT).show();
     }
 
     private void initViews() {
