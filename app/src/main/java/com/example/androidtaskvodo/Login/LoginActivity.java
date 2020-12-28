@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     Button btnRegister  , btnLogin ;
     EditText editEmail , editPassword ;
     List<AccountData> listofAccounts ;
-    AccountData accountData ;
+   static public   AccountData accountData ;
     String email , password ;
 
     String emailCaption = "Admin" ;
@@ -38,7 +38,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         loadData();
-
 
         btnRegister = findViewById(R.id.btnRegister);
         btnLogin = findViewById(R.id.btnLogin);
@@ -63,6 +62,7 @@ public class LoginActivity extends AppCompatActivity {
                   if(accountData == null){
                       Toast.makeText(LoginActivity.this, "Data Not Found", Toast.LENGTH_SHORT).show();
                   }else{
+
                       Intent HomeIntent = new Intent(LoginActivity.this , HomeActivity.class);
                       startActivity(HomeIntent);
                   }
@@ -74,7 +74,6 @@ public class LoginActivity extends AppCompatActivity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent registerIntent = new Intent(LoginActivity.this , RegisterActivity.class);
                 startActivity(registerIntent);
             }

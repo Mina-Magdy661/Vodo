@@ -1,6 +1,10 @@
 package com.example.androidtaskvodo.Login;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 public class AccountData {
+
 
     private String email ;
     private  String password ;
