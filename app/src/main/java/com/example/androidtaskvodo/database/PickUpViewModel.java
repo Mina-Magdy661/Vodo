@@ -20,8 +20,10 @@ public class PickUpViewModel extends AndroidViewModel {
     }
 
 
+
     PickUpSave db = Room.databaseBuilder( getApplication() ,
             PickUpSave.class, "savePickUp").build();
+
 
 
     PickUpDao pickUpDao = (db).pickUpDao();
@@ -37,6 +39,7 @@ public class PickUpViewModel extends AndroidViewModel {
     public LiveData<List<PickUpDeatils>> retrive (){
 
         return  pickUpDeatilsRepo.retrive();
+
     }
 
 

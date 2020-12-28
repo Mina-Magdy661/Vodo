@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UI.HomeForCaption.HomeActivityForCaption"></activity>
+        <activity android:name=".Caption.HomeForCaption.PickUpForCaption"></activity>
+        <activity android:name=".Caption.HomeForCaption.HomeActivityForCaption" />
         <activity android:name=".PickUp.PickUpActivity" />
         <activity android:name=".UI.HomeActivityForUser" />
         <activity android:name=".Login.RegisterActivity" />

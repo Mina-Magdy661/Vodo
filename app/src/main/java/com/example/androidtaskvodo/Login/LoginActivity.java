@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.androidtaskvodo.UI.HomeForCaption.HomeActivityForCaption;
+import com.example.androidtaskvodo.Caption.HomeForCaption.HomeActivityForCaption;
 import com.example.androidtaskvodo.UI.HomeActivityForUser;
 import com.example.androidtaskvodo.R;
 import com.google.gson.Gson;

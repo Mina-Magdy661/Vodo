@@ -1,4 +1,4 @@
-package com.example.androidtaskvodo.UI;
+package com.example.androidtaskvodo.Caption;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -39,6 +39,25 @@ public class NotificationAdpter extends RecyclerView.Adapter<NotificationAdpter.
         holder.txtCarType.setText(pickUpDeatils.get(position).getCarType());
         holder.txtLocation.setText(pickUpDeatils.get(position).getLocation());
         holder.txtID.setText(pickUpDeatils.get(position).getMembership_ID());
+
+        holder.imgOK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //when Accpect
+
+            }
+        });
+
+        holder.imgCANCEAL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //when Canceal
+                // remove row from DB
+
+            }
+        });
 
 
 
