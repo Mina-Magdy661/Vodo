@@ -6,47 +6,61 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingTop="20dp"
+    android:layout_margin="15dp"
     tools:context=".PickUp.PickUpActivity">
 
     <TextView
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CarModel" />
+        android:text=" CarModel" />
 
     <EditText
         android:id="@+id/editCarType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_margin="15dp"
         android:inputType="textPersonName" />
 
     <TextView
+        android:layout_margin="10dp"
         android:id="@+id/textView3"
+        android:textSize="24sp"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CarType" />
+        android:text=" CarType" />
 
     <EditText
         android:id="@+id/editCarModel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:layout_margin="15dp"
         android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="location"
-        android:textSize="24sp" />
+        android:text=" Location"
+        android:layout_margin="10dp"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
 
     <AutoCompleteTextView
+        android:layout_margin="15dp"
         android:id="@+id/address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
+        android:layout_marginHorizontal="50dp"
+        android:backgroundTint="#F49E9E"
         android:id="@+id/btnSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
