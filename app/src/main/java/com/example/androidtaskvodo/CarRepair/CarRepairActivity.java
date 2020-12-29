@@ -31,6 +31,7 @@ public class CarRepairActivity extends AppCompatActivity {
         carRepairBinding = ActivityCarRepairBinding.inflate(getLayoutInflater());
         View view = carRepairBinding.getRoot();
         setContentView(view);
+
         loadData();
         carRepairBinding.btnCarSend.setOnClickListener(new View.OnClickListener() {
             @Override

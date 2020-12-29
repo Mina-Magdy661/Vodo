@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.androidtaskvodo.CarRepair.CarRepairActivity;
 import com.example.androidtaskvodo.PickUp.PickUpDeatils;
 import com.example.androidtaskvodo.R;
 import com.example.androidtaskvodo.Caption.NotificationAdpter;
@@ -19,22 +20,44 @@ import java.util.List;
 public class HomeActivityForCaption extends AppCompatActivity {
 
 
-   CardView btnPickUp ;
+   CardView btnPickUpCaption , btnSparePart , btnCarRebair ;
 
        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_for_caption);
 
-        btnPickUp = findViewById(R.id.btnPickUpCaption);
+           btnPickUpCaption = findViewById(R.id.btnPickUpCaption);
+           btnSparePart = findViewById(R.id.btnSparePartsCaption);
+           btnCarRebair = findViewById(R.id.btnCarRebair);
 
-        btnPickUp.setOnClickListener(new View.OnClickListener() {
+           btnPickUpCaption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent pickUpActivity = new Intent(HomeActivityForCaption.this , PickUpForCaption.class );
                 startActivity(pickUpActivity);
             }
         });
+
+           btnSparePart.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+
+                   Intent SparePartActivity = new Intent(HomeActivityForCaption.this , SparePartFroCaption.class );
+                   startActivity(SparePartActivity);
+
+               }
+           });
+
+           btnCarRebair.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+
+                   Intent CarRepairActivity = new Intent(HomeActivityForCaption.this , CarRepairCaption.class );
+                   startActivity(CarRepairActivity);
+
+               }
+           });
 
     }
 }

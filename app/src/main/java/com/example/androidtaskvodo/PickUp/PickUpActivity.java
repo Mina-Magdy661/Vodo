@@ -52,10 +52,15 @@ public class PickUpActivity extends AppCompatActivity {
                         binding.editCarType.getText().toString(), binding.address.getText().toString() ,
                         LoginActivity.accountData.getMembershipID());
 
+                binding.editCarModel.setText("");
+                binding.editCarType.setText("");
+                binding.address.setText("Your Request Is sending");
+
               Thread thread = new Thread(new Runnable() {
                   @Override
                   public void run() {
                       pickUpViewModel.addPickUpDeatils(pickUpDeatils);
+
 
                   }
               });

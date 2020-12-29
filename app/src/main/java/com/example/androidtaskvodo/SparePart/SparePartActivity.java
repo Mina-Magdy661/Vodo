@@ -45,6 +45,7 @@ public class SparePartActivity extends AppCompatActivity {
                     item = editItem.getText().toString();
                     itemList.add(item);
                     saveData();
+                    editItem.setText("Request Is Send Successfuly");
 
                 }
             }
@@ -68,7 +69,7 @@ public class SparePartActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("SaveItemList" , MODE_PRIVATE);
         Gson  gson = new Gson();
         String json = sharedPreferences.getString("itemList", null);
-        Type type = new TypeToken<ArrayList<AccountData>>(){}.getType();
+        Type type = new TypeToken<ArrayList<String>>(){}.getType();
         itemList = gson.fromJson(json , type);
 
         if(itemList == null){
