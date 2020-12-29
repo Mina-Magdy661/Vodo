@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.androidtaskvodo.CarRepair.CarRepairActivity;
 import com.example.androidtaskvodo.PickUp.PickUpDeatils;
 import com.example.androidtaskvodo.R;
 import com.example.androidtaskvodo.Caption.NotificationAdpter;
@@ -19,7 +20,7 @@ import java.util.List;
 public class HomeActivityForCaption extends AppCompatActivity {
 
 
-   CardView btnPickUpCaption , btnSparePart ;
+   CardView btnPickUpCaption , btnSparePart , btnCarRebair ;
 
        @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class HomeActivityForCaption extends AppCompatActivity {
 
            btnPickUpCaption = findViewById(R.id.btnPickUpCaption);
            btnSparePart = findViewById(R.id.btnSparePartsCaption);
+           btnCarRebair = findViewById(R.id.btnCarRebair);
 
            btnPickUpCaption.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +49,15 @@ public class HomeActivityForCaption extends AppCompatActivity {
                }
            });
 
+           btnCarRebair.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
 
+                   Intent CarRepairActivity = new Intent(HomeActivityForCaption.this , CarRepairCaption.class );
+                   startActivity(CarRepairActivity);
+
+               }
+           });
 
     }
 }

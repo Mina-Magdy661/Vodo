@@ -15,41 +15,38 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.androidtaskvodo.R;
 import com.google.gson.Gson;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class SpareAdpter extends RecyclerView.Adapter<SpareAdpter.SpareViewHolder> {
+public class CarRepairAdpter extends RecyclerView.Adapter<CarRepairAdpter.SpareViewHolder> {
 
-    private List<String> listSpare ;
+    private List<String> listCarRapairRequest;
     Context context;
-     List<String> listNotfy = new ArrayList<>();
+//     List<String> listNotfy = new ArrayList<>();
 
 
 
-    public SpareAdpter(List<String> listSpare, Context context) {
-        this.listSpare = listSpare;
+    public CarRepairAdpter(List<String> listCarRapairRequest, Context context) {
+        this.listCarRapairRequest = listCarRapairRequest;
         this.context = context;
     }
 
     @NonNull
     @Override
     public SpareViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new SpareViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.spareitem, parent, false));
+        return new SpareViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.carrapiaritem, parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull SpareViewHolder holder, int position) {
 
-        holder.txtSpare.setText(listSpare.get(position));
+        holder.txtSpare.setText(listCarRapairRequest.get(position));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(context, listSpare.get(position), Toast.LENGTH_SHORT).show();
-                listNotfy.add(listSpare.get(position));
-                listSpare.remove(position);
+                Toast.makeText(context, listCarRapairRequest.get(position), Toast.LENGTH_SHORT).show();
+                listCarRapairRequest.remove(position);
                 notifyDataSetChanged();
-                saveDatanotfy();
                 saveData();
 
             }
@@ -59,7 +56,7 @@ public class SpareAdpter extends RecyclerView.Adapter<SpareAdpter.SpareViewHolde
 
     @Override
     public int getItemCount() {
-        return listSpare.size();
+        return listCarRapairRequest.size();
     }
 
 
@@ -79,24 +76,15 @@ public class SpareAdpter extends RecyclerView.Adapter<SpareAdpter.SpareViewHolde
         }
     }
 
-    private void saveDatanotfy() {
 
-        SharedPreferences sharedPreferences = context.getSharedPreferences("SaveItemListNotfy" ,context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        Gson gson = new Gson();
-        String json = gson.toJson(listNotfy);
-        editor.putString("listNotfy" , json);
-        editor.apply();
-
-    }
 
     private void saveData() {
 
-        SharedPreferences sharedPreferences = context.getSharedPreferences("SaveItemList" , context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = context.getSharedPreferences("SaveItemListforRequestRepair" , context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Gson gson = new Gson();
-        String json = gson.toJson(listSpare);
-        editor.putString("itemList" , json);
+        String json = gson.toJson(listCarRapairRequest);
+        editor.putString("itemListForCar" , json);
         editor.apply();
 
     }
