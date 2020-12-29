@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SparePart.SparePartActivity"></activity>
+        <activity android:name=".CarRepair.CarRepairActivity"></activity>
+        <activity android:name=".SparePart.SparePartActivity" />
         <activity android:name=".Caption.HomeForCaption.PickUpForCaption" />
         <activity android:name=".Caption.HomeForCaption.HomeActivityForCaption" />
         <activity android:name=".PickUp.PickUpActivity" />
