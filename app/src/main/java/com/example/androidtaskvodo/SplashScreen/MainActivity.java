@@ -11,7 +11,7 @@ import com.example.androidtaskvodo.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static int SPLASH_SCREEN = 100 ;
+    private static int SPLASH_SCREEN = 1000 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

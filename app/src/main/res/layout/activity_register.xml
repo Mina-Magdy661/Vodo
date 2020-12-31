@@ -17,7 +17,7 @@
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="100dp"
-            android:layout_height="150dp"
+            android:layout_height="100dp"
             android:layout_weight="1"
             android:padding="10dp"
             android:src="@drawable/vodo" />
@@ -109,9 +109,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
         android:layout_marginRight="30dp"
         android:backgroundTint="#F49E9E"
+        android:textAllCaps="false"
         android:text="Register"
         android:textColorHint="#00FF0D0D" />
 
