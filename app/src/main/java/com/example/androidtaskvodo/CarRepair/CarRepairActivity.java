@@ -22,7 +22,6 @@ public class CarRepairActivity extends AppCompatActivity {
 
     private ActivityCarRepairBinding carRepairBinding;
     String item ;
-
     List<String> itemList ;
 
     @Override
@@ -33,6 +32,7 @@ public class CarRepairActivity extends AppCompatActivity {
         setContentView(view);
 
         loadData();
+
         carRepairBinding.btnCarSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,7 +58,7 @@ public class CarRepairActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Gson gson = new Gson();
         String json = gson.toJson(itemList);
-        editor.putString("itemList" , json);
+        editor.putString("itemListt" , json);
         editor.apply();
 
     }
@@ -67,7 +67,7 @@ public class CarRepairActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("SaveCarRepairItemList" , MODE_PRIVATE);
         Gson  gson = new Gson();
-        String json = sharedPreferences.getString("itemList", null);
+        String json = sharedPreferences.getString("itemListt", null);
         Type type = new TypeToken<ArrayList<AccountData>>(){}.getType();
         itemList = gson.fromJson(json , type);
 
